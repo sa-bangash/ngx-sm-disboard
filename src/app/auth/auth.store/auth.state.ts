@@ -21,7 +21,7 @@ export class AuthState {
 	logout({ setState, getState }: StateContext<AuthModel>) {
 		const { token } = getState();
 		console.log(token);
-		setState({});
+		setState({} as AuthModel);
 	}
 
 }

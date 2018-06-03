@@ -9,9 +9,5 @@ import * as AuthStore from './auth/auth.store';
 export class AppComponent {
 	constructor(private store: Store) {
 		store.dispatch(new AuthStore.AuthActions.Login({ username: 'shahid', password: 'ssss' }));
-		console.log(store.snapshot());
-		setTimeout(() => {
-			store.dispatch(new AuthStore.AuthActions.Logout());
-		}, 3000);
 	}
 }

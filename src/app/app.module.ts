@@ -10,6 +10,8 @@ import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AuthState } from './auth/auth.store/auth.state';
+import { DisboardModule } from './disboard/disboard.module';
+
 @NgModule({
 	declarations: [
 		AppComponent
@@ -18,7 +20,8 @@ import { AuthState } from './auth/auth.store/auth.state';
 		BrowserModule,
 		BrowserAnimationsModule,
 		NgxsModule.forRoot([AuthState]),
-		NgxsReduxDevtoolsPluginModule.forRoot()
+		NgxsReduxDevtoolsPluginModule.forRoot(),
+		DisboardModule,
 	],
 	providers: [],
 	bootstrap: [AppComponent]
