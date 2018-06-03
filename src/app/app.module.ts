@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 // ngxs
 import { NgxsModule } from '@ngxs/store';
 import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
+import { NgxsRouterPluginModule } from '@ngxs/router-plugin';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AuthState } from './auth/auth.store/auth.state';
 import { DisboardModule } from './disboard/disboard.module';
-
+import { AppRoutingModule } from './app-routing.module';
+import { AuthModule } from './auth/auth.module';
 @NgModule({
 	declarations: [
 		AppComponent
@@ -21,7 +23,10 @@ import { DisboardModule } from './disboard/disboard.module';
 		BrowserAnimationsModule,
 		NgxsModule.forRoot([AuthState]),
 		NgxsReduxDevtoolsPluginModule.forRoot(),
+		NgxsRouterPluginModule.forRoot(),
+		AppRoutingModule,
 		DisboardModule,
+		AuthModule,
 	],
 	providers: [],
 	bootstrap: [AppComponent]
