@@ -12,8 +12,8 @@ export class AppComponent {
 	constructor(private store: Store) {
 		store.dispatch(new AuthStore.AuthActions.Login({ username: 'shahid', password: 'ssss' }));
 
-		setTimeout(() => {
-			this.store.dispatch(new Navigate(['/disboard']));
-		}, 3000);
+		// setTimeout(() => {
+		// 	this.store.dispatch(new Navigate(['/disboard']));
+		// }, 3000);
 	}
 }

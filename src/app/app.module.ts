@@ -14,6 +14,7 @@ import { AuthState } from './auth/auth.store/auth.state';
 import { DisboardModule } from './disboard/disboard.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AuthModule } from './auth/auth.module';
+
 @NgModule({
 	declarations: [
 		AppComponent
